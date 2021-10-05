@@ -1,0 +1,212 @@
+.target-login {
+    border-radius: 7px;
+    margin: 100px auto 30px auto;
+    padding: 60px;
+    background-color: white;
+    width: 600px;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.05);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 65px 1fr;
+    gap: 15px;
+    /* Para más pequeño quitar el gap y hacerlos más pequeños */
+}
+
+.target-login button {
+    background: #6E01FF;
+    width: 200px;
+    padding: 1em;
+    border-radius: 7px;
+    border: none;
+    box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s, transform 0.3s;
+    margin-top: 0;
+}
+
+.target-login button:hover {
+    box-shadow: 0 3px 5px -5px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+.target-login button:focus {
+    outline: none;
+}
+
+.target-login button a{
+    font-size: 1em;
+    text-decoration: none;
+    color: white;   
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.target-login h1 {
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 0;
+    font-family: Roboto, sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.target-login .loguearse {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
+}
+
+.target-login .loguearse button:nth-child(1) {
+    margin-right: 20px;
+}
+
+.target-login .forms {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: center;
+}
+
+.target-login .forms fieldset {
+    border: none;
+}
+
+.target-login .forms fieldset label[for=email], label[for=password]{
+    font-size: 11px;
+    text-decoration: none;
+    color: black;   
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    display: block;
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.target-login .forms fieldset input[type=email], input[type=password] {
+    width: 400px;
+    padding: 1em;
+    border-radius: 5em;
+    background-color: #F8F8FB;
+    border: none;
+}
+
+.target-login label[for=terms]{
+    font-size: 11px;
+    text-decoration: none;
+    color: black;   
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.2px; 
+    margin-bottom: 10px;
+}
+
+.target-login .loguearse button:nth-child(1) {
+    margin-right: 20px;
+    background: #CF4332;
+}
+
+.target-login .loguearse button:nth-child(2) {
+    background: #3C66C4;
+}
+
+.target-login .enter {
+    grid-column: 1;
+    grid-row: 4;
+    justify-self: center;
+}
+
+.target-login .enter button {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.target-login .enter a {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    color: white;   
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.target-login #recover {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: black;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.target-login .switch {
+    display: inline-block;
+    height: 10px;
+    position: relative;
+    width: 26px;  
+    top: 2.5px;
+    margin-right: 10px;
+}
+  
+.target-login .switch input {
+    display:none;
+}
+  
+.target-login .slider {
+    background-color: lightgrey;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+  
+.target-login .slider:before {
+    background-color: #6E01FF;
+    bottom: -2px;
+    content: "";
+    height: 15px;
+    position: absolute;
+    transition: .4s;
+    width: 15px;
+}
+  
+input:checked + .slider {
+    background-color: #6E01FF;
+}
+  
+input:checked + .slider:before {
+    transform: translateX(13px);
+}
+
+input:focus {
+    box-shadow: 0 0 4pt 2pt rgba(110, 1, 255, 0.12);
+    outline: none;
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+#button-acceder-login {
+    display: block;
+    margin: 15px auto 0 auto;
+    text-decoration: none;
+    color: white;   
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}

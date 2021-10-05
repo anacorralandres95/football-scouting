@@ -1,0 +1,35 @@
+#notfound img{
+    display: block;
+    width: 850px;
+    margin: 100px auto 0 auto;
+}
+
+#notfound button {
+    background: #6E01FF;
+    width: 500px;
+    padding: 1em;
+    border-radius: 7px;
+    border: none;
+    display: block;
+    margin: 50px auto 0 auto;
+    box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+#notfound button:hover {
+    box-shadow: 0 3px 5px -5px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+#notfound button:focus {
+    outline: none;
+}
+
+#notfound button a{
+    font-size: 1em;
+    text-decoration: none;
+    color: white;   
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}

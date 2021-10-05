@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
+
+
+body {
+    /* background: url(/img/fondo-oscuro.jpg) no-repeat center center fixed; */
+    background-size: cover;
+    background-color: #F8F8FB;
+    margin: 0;
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none;
+    height: 430px;
+    background-color: #6e00ff;
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+    z-index: -2000;
+}
+
+
+header img {
+    height: 50px;
+}
+  
+header {
+    padding: 6px 25px 4px 25px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #6e00ff;
+    /* background-image: linear-gradient(to right, #8a00ff, #6E01FF); */
+    /* box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.05); */
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    border-bottom: 1px solid hsla(0,0%,100%,.1);
+    z-index: 1000;
+}
+  
+  
+header ul {
+    margin: 7px 45px 0 0;
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+  
+  
+header a {
+    display: block;
+    font-size: 1em;
+    text-decoration: none;
+    color: white;   
+    font-family: Roboto, sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+    padding: 9px 10px 8px 10px;
+}
+  
+header button {
+    background: transparent;
+    border: none;
+}
+  
+.login-nav {
+    border: 2px solid white;
+    display: block;
+    border-radius: 50px;
+    transition: background-color 0.6s;
+}
+  
+.nav {
+    margin-top: 3px;
+}
+
+.nav a {
+    text-transform: uppercase;
+}
+  
+.login-nav:hover {
+    background-color: white;
+}
+  
+.login-nav a {
+    color: white;
+    transition: color 0.6s;
+}
+  
+.login-nav:hover a{
+    color: #6e00ff;
+}
+  
+header button.nav {
+    margin-right: 15px;
+}
+  
+button:focus {
+    outline: none;
+}
+
+.logo a {
+    padding: 0;
+}
+  
+  
+.menu-nav2 img {
+    height: 18px;
+    padding-left: 10px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+  
+.menu-nav2 a {
+    display: inline-block;
+  
+}
+  
+  
+footer {
+    height: 180px;
+    padding: 40px 100px;
+    /* background:#6e00ff; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 140px 1fr;
+    justify-content: center;
+    align-content: center;
+}
+  
+footer img {
+    height: 23px;
+}
+  
+.logo {
+    grid-column: 1;
+    grid-row: 1;
+}
+  
+.contact-footer {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+}
+  
+.follow-footer {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+}
+  
+.footer-footer {
+    grid-column: 1/-1;
+    grid-row: 2;
+    border-top: 1px solid #565F6B;
+}
+  
+footer h2 {
+    margin-top: 3px;
+    color: #565F6B;
+    font-size: 0.8em;
+    font-family: Roboto, sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+}
+  
+footer p {
+    color: #565F6B;
+    font-family: Roboto, sans-serif;
+    font-size: 0.8em;
+    line-height: 18px;
+    font-weight: 700;
+}
+  
+  
+footer a {
+    font-size: 1em;
+    text-decoration: none;
+    color: #565F6B;   
+    font-family: Roboto, sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+}
+  
+  
+footer button {
+    background: transparent;
+    border: none;
+    margin-right: 20px;
+}
+  
+  
+footer button:nth-child(3) {
+    background: transparent;
+    border: 2px solid #565F6B;
+    width: 180px;
+    padding: 1em;
+    margin-top: 2em;
+    border-radius: 5em;
+    color: #565F6B;
+}
+  
+  
+.follow-footer img {
+    height: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+#aviso {
+    display: none;
+}
+
+
+@media (max-width: 920px) {
+   header {
+        background-color: #6e00ff;
+        opacity: 0.9;
+        height: 100vh;
+   }
+
+   header ul {
+       display: none;
+   }
+
+   #aviso {
+    display: inline-block;
+    font-size: 0.9em;
+    text-decoration: none;
+    color: whitesmoke;   
+    font-family: Roboto, sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+    padding-top: 5px;
+    }
+  }
