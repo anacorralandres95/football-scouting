@@ -1,17 +1,13 @@
 "use strict";
 
-const account = require("./account-router");
-const promise = require("./promise-router");
-const auth = require("./auth-router");
-const video = require("./video-router");
-// const notes = require('./notes-router');
-// const user = require('./user-router');
+import account from "./account-router";
+import promise from "./promise-router";
+import auth from "./auth-router";
+import video from "./video-router";
 
-module.exports = {
+export default {
   account,
   promise,
   auth,
-  video
-  //   notes,
-  //   user,
+  video,
 };

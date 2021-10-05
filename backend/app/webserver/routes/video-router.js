@@ -1,25 +1,22 @@
 "use strict";
-
-
 const router = require("express").Router();
-const multer = require("multer");
+import multer from "multer";
 
-const addVideo = require("../controllers/videos/add-videos-controller");
-const checkAccountSession = require("../controllers/account/check-account-controller");
-const getVideo = require("../controllers/videos/get-videos-controller");
-const getVideoOnly = require("../controllers/videos/get-video-controller");
-const getMyVideos = require("../controllers/videos/get-myvideos-controller");
-const addComment = require("../controllers/videos/add-comment-controller");
-const addFavorite = require("../controllers/videos/add-favorite-controller");
-const getComments = require("../controllers/videos/get-comment-controller");
-const getVideosRelated = require("../controllers/videos/get-related-videos-controller");
-const getFavorites = require("../controllers/videos/get-favorites-controller");
-const deteleMyVideos = require("../controllers/videos/detele-myvideos-controller");
-const deleteFavorite = require("../controllers/videos/delete-favorite");
-const deleteComment = require("../controllers/videos/delete-comment");
-const addRating = require("../controllers/videos/add-rating-controller");
-const getRating = require("../controllers/videos/get-rating-controller");
-
+import addVideo from "../controllers/videos/add-videos-controller";
+import checkAccountSession from "../controllers/account/check-account-controller";
+import getVideo from "../controllers/videos/get-videos-controller";
+import getVideoOnly from "../controllers/videos/get-video-controller";
+import getMyVideos from "../controllers/videos/get-myvideos-controller";
+import addComment from "../controllers/videos/add-comment-controller";
+import addFavorite from "../controllers/videos/add-favorite-controller";
+import getComments from "../controllers/videos/get-comment-controller";
+import getVideosRelated from "../controllers/videos/get-related-videos-controller";
+import getFavorites from "../controllers/videos/get-favorites-controller";
+import deteleMyVideos from "../controllers/videos/detele-myvideos-controller";
+import deleteFavorite from "../controllers/videos/delete-favorite";
+import deleteComment from "../controllers/videos/delete-comment";
+import addRating from "../controllers/videos/add-rating-controller";
+import getRating from "../controllers/videos/get-rating-controller";
 
 const upload = multer();
 
@@ -38,6 +35,4 @@ router.post("/:video_id/comment", checkAccountSession, addComment);
 router.post("/:video_id/favorite", checkAccountSession, addFavorite);
 router.post("/:video_id/rating", checkAccountSession, addRating);
 
-
-
-module.exports = router;
+export default router;

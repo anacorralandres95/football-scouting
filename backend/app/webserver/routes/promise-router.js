@@ -1,16 +1,17 @@
 "use strict";
-
-
 const router = require("express").Router();
-const multer = require("multer");
+import multer from "multer";
 
-const createPlayer = require("../controllers/promise/addpromise-controller");
-const createAccount = require("../controllers/account/addaccount-controller");
-const checkAccountSession = require("../controllers/account/check-account-controller");
+import createPlayer from "../controllers/promise/addpromise-controller";
+import checkAccountSession from "../controllers/account/check-account-controller";
 
 const upload = multer();
 
-router.post("/", checkAccountSession, upload.single("avatar_url"), createPlayer);
-// router.post("/", checkAccountSession, createPlayer);
+router.post(
+  "/",
+  checkAccountSession,
+  upload.single("avatar_url"),
+  createPlayer
+);
 
-module.exports = router;
+export default router;

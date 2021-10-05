@@ -1,18 +1,14 @@
 "use strict";
-
 require("dotenv").config();
-const webServer = require("./app/webserver");
-const mysqlPool = require("./app/database/mysql-pool");
+import { listen } from "./app/webserver";
+import { connect } from "./app/database/mysql-pool";
 
 const httpListeningPort = process.env.PORT;
 
-/**
- * Initialize dependencies
- * */
 async function initApp() {
   try {
-    await mysqlPool.connect();
-    await webServer.listen(httpListeningPort);
+    await connect();
+    await listen(httpListeningPort);
     console.log(`server running at: ${httpListeningPort}`);
   } catch (e) {
     console.error(e);

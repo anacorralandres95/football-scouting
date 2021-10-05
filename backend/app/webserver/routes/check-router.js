@@ -1,8 +1,6 @@
 "use strict";
-const express = require("express");
-const multer = require("multer");
-const checkAccountSession = require("../controllers/account/check-account-session");
+import { Router } from "express";
 
-const router = express.Router();
+const router = Router();
 
-module.exports = router;
+export default router;

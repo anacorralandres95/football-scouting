@@ -1,14 +1,8 @@
 "use strict";
+import { createPool } from "mysql2/promise";
 
-const mysql = require("mysql2/promise");
-
-const {
-  MYSQL_HOST,
-  MYSQL_USER,
-  MYSQL_PASSWORD,
-  MYSQL_PORT,
-  MYSQL_DATABASE
-} = process.env;
+const { MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_PORT, MYSQL_DATABASE } =
+  process.env;
 
 let pool = null;
 
@@ -21,14 +15,10 @@ async function connect() {
     database: MYSQL_DATABASE,
     port: MYSQL_PORT,
     timezone: "Z",
-    // debug: true,
-    multipleStatements: true
+    multipleStatements: true,
   };
 
-  /**
-   * Create connection pool
-   */
-  pool = mysql.createPool(options);
+  pool = createPool(options);
 
   try {
     const connection = await pool.getConnection();
@@ -52,7 +42,7 @@ async function getConnection() {
   return connection;
 }
 
-module.exports = {
+export default {
   connect,
-  getConnection
+  getConnection,
 };

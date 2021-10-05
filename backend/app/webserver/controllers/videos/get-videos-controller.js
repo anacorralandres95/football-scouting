@@ -1,32 +1,25 @@
 "use strict";
+import { getConnection } from "../../../database/mysql-pool";
 
-const mysqlPool = require("../../../database/mysql-pool");
-const httpServerDomain = process.env.HTTP_SERVER_DOMAIN;
+async function getVideos(_, res) {
+  try {
+    const sqlQuery = `SELECT * FROM videos
+      JOIN promise 
+      WHERE videos.promise_id = promise.promise_id
+      AND deleted_at IS NULL
+      ORDER BY created_at desc`;
 
-async function getVideos(req, res, next) {
+    const connection = await getConnection();
+    const [rows] = await connection.execute(sqlQuery);
 
-try {
-// const sqlQuery = `SELECT * FROM videos ORDER BY created_at asc`;
+    connection.release();
 
-const sqlQuery = `SELECT * FROM videos
-JOIN promise 
-WHERE videos.promise_id = promise.promise_id
-AND deleted_at IS NULL
-ORDER BY created_at desc`;
-
-
-const connection = await mysqlPool.getConnection();
-const [rows] = await connection.execute(sqlQuery);
-connection.release();
-
-console.log("rows", rows);
-
-return res.status(200).send({
-  data: rows
-});
-} catch (e) {
-return res.status(500).send({ message: e.message });
-}
+    return res.status(200).send({
+      data: rows,
+    });
+  } catch (e) {
+    return res.status(500).send({ message: e.message });
+  }
 }
 
-module.exports = getVideos;
+export default getVideos;
