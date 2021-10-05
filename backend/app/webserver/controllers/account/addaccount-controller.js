@@ -6,6 +6,10 @@ import cryptoRandomString from "crypto-random-string";
 import Joi from "@hapi/joi";
 import { setApiKey, send } from "@sendgrid/mail";
 import mysqlPool from "../../../database/mysql-pool";
+import PASSWORD_REGEX from "../../constants";
+
+const HASH = 10;
+const CRYPTO_LENGTH = 64;
 
 setApiKey(process.env.SENDGRID_API_KEY);
 
@@ -20,9 +24,7 @@ async function validateSchema(payload) {
     postal_code: string().required(),
     phone: string().required(),
     email: string().email().required(),
-    password: string()
-      .regex(/^[a-zA-Z0-9]{6,30}$/)
-      .required(),
+    password: string().regex(PASSWORD_REGEX).required(),
     user_type: string().required(),
     club: string(),
   });
@@ -34,7 +36,7 @@ async function sendEmailRegistration(email) {
   const msg = {
     to: email,
     from: {
-      email: "jose@yopmail.com",
+      email: "ana@yopmail.com",
       name: "Champions.",
     },
     subject: "Welcome to Champions",
@@ -47,7 +49,7 @@ async function sendEmailRegistration(email) {
   return data;
 }
 
-async function createAccount(req, res, next) {
+async function createAccount(req, res) {
   const accountData = { ...req.body };
 
   try {
@@ -60,11 +62,11 @@ async function createAccount(req, res, next) {
   const createdAt = now.toISOString().substring(0, 19).replace("T", " ");
   const user_id = uuidV4();
 
-  const securePassword = await hash(accountData.password, 10);
+  const securePassword = await hash(accountData.password, HASH);
 
   try {
     const connection = await mysqlPool.getConnection();
-    const verificationCode = cryptoRandomString({ length: 64 });
+    const verificationCode = cryptoRandomString({ length: CRYPTO_LENGTH });
     const sqlInsercion = "INSERT INTO user SET ?";
 
     await connection.query(sqlInsercion, {

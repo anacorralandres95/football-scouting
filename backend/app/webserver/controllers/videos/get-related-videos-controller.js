@@ -23,6 +23,7 @@ async function getRelated(req, res) {
         WHERE videos.promise_id = '${promise_id}' 
         AND deleted_at IS NULL
         ORDER BY created_at desc`;
+
     const [related] = await connection.execute(sqlQuery2);
 
     connection.release();

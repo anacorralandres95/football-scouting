@@ -15,7 +15,7 @@ async function createFavorite(req, res) {
     });
 
     connection.release();
-    res.status(201).send("favorite created");
+    res.status(201).send("Favorite created");
   } catch (e) {
     return res.status(500).send(e.message);
   }

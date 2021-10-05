@@ -38,7 +38,7 @@ async function deleteMyVideo(req, res) {
       return res.status(404).send();
     }
 
-    return res.status(204).send("Borrado");
+    return res.status(204).send("Removed");
   } catch (e) {
     res.status(500).send({
       message: e.message,

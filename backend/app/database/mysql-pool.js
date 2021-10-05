@@ -4,11 +4,13 @@ import { createPool } from "mysql2/promise";
 const { MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_PORT, MYSQL_DATABASE } =
   process.env;
 
+const CONNECTION_LIMIT = 10;
+
 let pool = null;
 
 async function connect() {
   const options = {
-    connectionLimit: 10,
+    connectionLimit: CONNECTION_LIMIT,
     host: MYSQL_HOST,
     user: MYSQL_USER,
     password: MYSQL_PASSWORD,

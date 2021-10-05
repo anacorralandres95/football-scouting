@@ -44,7 +44,7 @@ async function createVideo(req, res) {
   const { user_id, user_type } = req.claims;
 
   if (user_type !== "Padre") {
-    return res.status(403).send("No autorizado");
+    return res.status(403).send("Not authorized");
   }
 
   const promiseData = {

@@ -1,5 +1,4 @@
 "use strict";
-
 import { verify } from "jsonwebtoken";
 
 async function checkAccountSession(req, res, next) {

@@ -1,16 +1,14 @@
 "use strict";
-
 import { compare } from "bcrypt";
 import { object, string, assert } from "@hapi/joi";
 import { sign } from "jsonwebtoken";
 import { getConnection } from "../../../database/mysql-pool";
+import PASSWORD_REGEX from "../../constants";
 
 async function validateSchema(payload) {
   const schema = object({
     email: string().email().required(),
-    password: string()
-      .regex(/^[a-zA-Z0-9]{3,30}$/)
-      .required(),
+    password: string().regex(PASSWORD_REGEX).required(),
   });
 
   assert(payload, schema);
