@@ -1,0 +1,141 @@
+form fieldset {
+  border: none;
+}
+
+label[for="email"],
+label[for="password"],
+label[for="name"],
+label[for="lastname1"],
+label[for="lastname2"],
+label[for="gender"],
+label[for="code"],
+label[for="phone"],
+label[for="repeat-password"],
+label[for="club"] {
+  font-size: 11px;
+  text-decoration: none;
+  color: black;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  display: block;
+  width: 400px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+fieldset input[type="text"],
+fieldset input[type="email"],
+fieldset input[type="password"] {
+  width: 400px;
+  padding: 1em;
+  border-radius: 5em;
+  background-color: #f8f8fb;
+  border: none;
+}
+
+label[for="terms"] {
+  font-size: 11px;
+  text-decoration: none;
+  color: black;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-bottom: 10px;
+}
+
+.switch {
+  display: inline-block;
+  height: 10px;
+  position: relative;
+  width: 26px;
+  top: 2.5px;
+  margin-right: 10px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: lightgrey;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #6e01ff;
+  bottom: -2px;
+  content: "";
+  height: 15px;
+  position: absolute;
+  transition: 0.4s;
+  width: 15px;
+}
+
+input:checked + .slider {
+  background-color: #6e01ff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(13px);
+}
+
+input:focus {
+  box-shadow: 0 0 4pt 2pt rgba(110, 1, 255, 0.12);
+  outline: none;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+select {
+  width: 420px;
+  border-radius: 5em;
+  background-color: #f9f9f9;
+  border: none;
+  padding: 12px;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 4pt 2pt rgba(110, 1, 255, 0.12);
+}
+
+#form-lastname2-register,
+#form-phone-register,
+#form-club-register {
+  margin-bottom: 50px;
+}
+
+#form-type-register {
+  display: none;
+}
+
+.error {
+  box-shadow: 0 0 4pt 2pt rgba(191, 45, 10, 0.1);
+}
+
+.errorMessage {
+  display: block;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 0.7rem;
+  color: #bf2d0a;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  width: 150px;
+  text-decoration: none;
+  width: 100%;
+}

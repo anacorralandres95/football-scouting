@@ -1,13 +1,11 @@
 import React from "react";
-import { useAuth } from "../shared/context/auth-context";
 import { useHistory } from "react-router-dom";
-import close from "../assets/icons/close.png";
 
 function Loading() {
   return <p>Loading</p>;
 }
 
-function AllMyVideosList({ myvideos, selectedIndex, onMyVideoSelected }) {
+function AllMyVideosList({ myvideos, onMyVideoSelected }) {
   const history = useHistory();
 
   if (myvideos === undefined) return <Loading />;
@@ -15,8 +13,6 @@ function AllMyVideosList({ myvideos, selectedIndex, onMyVideoSelected }) {
   if (myvideos.length === 0) {
     return <h1 id="empty">Sube tu primer vídeo a la plataforma.</h1>;
   }
-
-  console.log(selectedIndex);
 
   return (
     <React.Fragment>
@@ -41,7 +37,6 @@ function AllMyVideosList({ myvideos, selectedIndex, onMyVideoSelected }) {
               {MyVideo.team} ·{" "}
               {MyVideo.created_at.substring(0, 16).replace("T", " ")}
             </span>
-            {/* <img src={close} alt="" class="icon-close"></img> */}
           </li>
         ))}
       </ul>
