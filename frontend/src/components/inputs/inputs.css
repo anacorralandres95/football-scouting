@@ -2,7 +2,7 @@ form fieldset {
   border: none;
 }
 
-label[for="email"],
+form label[for="email"],
 label[for="password"],
 label[for="name"],
 label[for="lastname1"],
@@ -11,7 +11,15 @@ label[for="gender"],
 label[for="code"],
 label[for="phone"],
 label[for="repeat-password"],
-label[for="club"] {
+label[for="club"],
+label[for="comunity"],
+label[for="province"],
+label[for="datebirth"],
+label[for="team"],
+label[for="height"],
+label[for="demarcation"],
+label[for="weight"],
+label[for="leg"] {
   font-size: 11px;
   text-decoration: none;
   color: black;
@@ -114,7 +122,10 @@ select:focus {
 
 #form-lastname2-register,
 #form-phone-register,
-#form-club-register {
+#form-club-register,
+#form-datebirth-file-card,
+#form-province-file-card,
+#form-weight-file-card {
   margin-bottom: 50px;
 }
 

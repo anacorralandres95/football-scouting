@@ -30,7 +30,7 @@ function Register({ value, title }) {
 
   const handleSignUp = (formData) => {
     return signUp(formData).catch((error) => {
-      if (error.response.status === 409) {
+      if (error?.response?.status === 409) {
         setError(
           "email",
           "conflict",

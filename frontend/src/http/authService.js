@@ -33,22 +33,8 @@ export function register({
   });
 }
 
-export function registerPromise({
-  avatar_url,
-  name,
-  surname1,
-  surname2,
-  gender,
-  comunity,
-  province,
-  date_birth,
-  team,
-  height,
-  weight,
-  demarcation,
-  best_leg,
-}) {
-  return axios.post(`http://localhost:8000/api/promise`, {
+export function registerPromise(
+  {
     avatar_url,
     name,
     surname1,
@@ -62,5 +48,26 @@ export function registerPromise({
     weight,
     demarcation,
     best_leg,
-  });
+  },
+  config
+) {
+  return axios.post(
+    `http://localhost:8000/api/promise`,
+    {
+      avatar_url,
+      name,
+      surname1,
+      surname2,
+      gender,
+      comunity,
+      province,
+      date_birth,
+      team,
+      height,
+      weight,
+      demarcation,
+      best_leg,
+    },
+    config
+  );
 }

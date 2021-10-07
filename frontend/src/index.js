@@ -12,7 +12,7 @@ import { PasswordRecovery } from "./screens/password-recovery/PasswordRecovery.j
 import { PromiseRegister } from "./screens/registers/PromiseRegister.js";
 import { ScoutRegister } from "./screens/registers/ScoutRegister.js";
 import { AssistantRegister } from "./screens/registers/AssistantRegister.js";
-import { FileCard } from "./screens/FileCard.js";
+import { FileCard } from "./screens/file-card/FileCard.js";
 import { Payment } from "./screens/payment/Payment.js";
 import { Dashboard } from "./screens/Dashboard.js";
 import { Favorites } from "./screens/Favorites.js";

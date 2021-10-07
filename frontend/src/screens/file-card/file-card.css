@@ -1,0 +1,51 @@
+.target-card {
+  border-radius: 7px;
+  margin: 100px auto 30px auto;
+  padding: 60px;
+  background-color: white;
+  width: 600px;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.05);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 1fr;
+  gap: 15px;
+}
+
+.target-card h1 {
+  grid-column: 1;
+  grid-row: 1;
+  margin-top: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.upload-photo {
+  justify-self: center;
+  margin-bottom: 70px;
+  margin-top: 20px;
+}
+
+.upload-photo img {
+  border-radius: 50%;
+  float: left;
+  width: 80px;
+  margin-right: 20px;
+}
+
+.upload-photo input {
+  margin-top: 30px;
+}
+
+.form-file-card {
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: center;
+}
+
+.container {
+  margin-top: 20px;
+}

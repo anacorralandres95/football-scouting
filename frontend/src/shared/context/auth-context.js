@@ -72,39 +72,45 @@ export function AuthProvider({ children }) {
     }
   };
 
-  const signUpPromise = async ({
-    avatar_url,
-    name,
-    surname1,
-    surname2,
-    gender,
-    comunity,
-    province,
-    date_birth,
-    team,
-    height,
-    weight,
-    demarcation,
-    best_leg,
-  }) => {
+  const signUpPromise = async (
+    {
+      avatar_url,
+      name,
+      surname1,
+      surname2,
+      gender,
+      comunity,
+      province,
+      date_birth,
+      team,
+      height,
+      weight,
+      demarcation,
+      best_leg,
+    },
+    config
+  ) => {
     try {
       const {
         data: { token, promise },
-      } = await registerPromise({
-        avatar_url,
-        name,
-        surname1,
-        surname2,
-        gender,
-        comunity,
-        province,
-        date_birth,
-        team,
-        height,
-        weight,
-        demarcation,
-        best_leg,
-      });
+      } = await registerPromise(
+        {
+          avatar_url,
+          name,
+          surname1,
+          surname2,
+          gender,
+          comunity,
+          province,
+          date_birth,
+          team,
+          height,
+          weight,
+          demarcation,
+          best_leg,
+        },
+        config
+      );
 
       setPromise(promise);
       setIsAuthenticated(true);

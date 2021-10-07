@@ -6,8 +6,8 @@ import { Header } from "../../components/Header.js";
 import { Footer } from "../../components/Footer.js";
 import { Faqs } from "../../components/Faqs.js";
 import arrow from "../../assets/icons/arrow-down.png";
-import "./homepage.css";
 import { ButtonLink } from "../../components/button-link/ButtonLink";
+import "./homepage.css";
 
 function Homepage() {
   const [height, setHeight] = useState(window.innerHeight);
