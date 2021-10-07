@@ -13,7 +13,7 @@ import { PromiseRegister } from "./screens/registers/PromiseRegister.js";
 import { ScoutRegister } from "./screens/registers/ScoutRegister.js";
 import { AssistantRegister } from "./screens/registers/AssistantRegister.js";
 import { FileCard } from "./screens/FileCard.js";
-import { Payment } from "./screens/Payment.js";
+import { Payment } from "./screens/payment/Payment.js";
 import { Dashboard } from "./screens/Dashboard.js";
 import { Favorites } from "./screens/Favorites.js";
 import { MyVideos } from "./screens/MyVideos.js";

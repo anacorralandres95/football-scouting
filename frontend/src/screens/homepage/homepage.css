@@ -155,30 +155,6 @@
   margin-left: 10px;
 }
 
-.target button {
-  margin-bottom: 20px;
-  background: #6e01ff;
-  width: 80%;
-  padding: 1em;
-  margin-top: 2em;
-  border-radius: 7px;
-  border: none;
-}
-
-.target button:focus {
-  outline: none;
-}
-
-.target button a {
-  font-size: 1em;
-  text-decoration: none;
-  color: white;
-  font-family: Roboto, sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-}
-
 .account {
   grid-column: 1/-1;
   grid-row: 3;

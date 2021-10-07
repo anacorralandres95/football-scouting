@@ -7,6 +7,7 @@ import { Footer } from "../../components/Footer.js";
 import { Faqs } from "../../components/Faqs.js";
 import arrow from "../../assets/icons/arrow-down.png";
 import "./homepage.css";
+import { ButtonLink } from "../../components/button-link/ButtonLink";
 
 function Homepage() {
   const [height, setHeight] = useState(window.innerHeight);
@@ -95,9 +96,11 @@ function Homepage() {
               {role.plans.map((plan) => {
                 return <p>{plan}</p>;
               })}
-              <button id="enter-father">
-                <Link to={role.link}>{formatMessage("Registrarse")}</Link>
-              </button>
+
+              <ButtonLink
+                link={role.link}
+                title={formatMessage("Registrarse")}
+              />
             </section>
           );
         })}

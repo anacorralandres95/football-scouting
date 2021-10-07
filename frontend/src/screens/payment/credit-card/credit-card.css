@@ -1,68 +1,4 @@
-header {
-  z-index: 2000;
-}
-
-.checkout fieldset {
-  border: none;
-  padding: 0;
-  padding: 10px 0;
-  position: relative;
-  clear: both;
-}
-
-.checkout .number-card {
-  margin-top: 20px;
-}
-
-
-.checkout label {
-  font-size: 11px;
-  text-decoration: none;
-  color: black;   
-  font-family: Roboto, sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  display: block;
-  width: 400px;
-  margin: -25px 0 10px;
-}
-
-.checkout input {
-  width: 350px;
-  padding: 1em;
-  border-radius: 5em;
-  background-color: #F8F8FB;
-  border: none;
-  margin-bottom: 20px;
-}
-
-.checkout .form {
-  width: 600px;
-}
-
-.checkout .input-cart-number {
-  width: 62px;
-  display: inline-block;
-  margin-right: 8px;
-}
-
-    
-.checkout .fieldset-expiration select {
-  width: 370px;
-  border-radius: 5em;
-  background-color: #F9F9F9;
-  border: none;
-  margin-bottom: 15px;
-}
-
-   
-.checkout {
-  margin: 130px auto;
-  position: relative;
-  padding: 160px 45px 0px;
-}
-
-.checkout .credit-card-box {
+.credit-card-box {
   width: 400px;
   height: 280px;
   position: absolute;
@@ -73,7 +9,7 @@ header {
 
 .credit-card-box:hover .flip,
 .credit-card-box.hover .flip {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .front,
@@ -82,7 +18,7 @@ header {
   height: 250px;
   border-radius: 15px;
   backface-visibility: hidden;
-  background: linear-gradient(to right, #8a00ff, #6E01FF);
+  background: linear-gradient(to right, #8a00ff, #6e01ff);
   position: absolute;
   color: #fff;
   font-family: Roboto;
@@ -93,29 +29,31 @@ header {
 }
 
 .back::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background: url('http://cdn.flaticon.com/svg/44/44386.svg') no-repeat center;
+  background: url("https://image.flaticon.com/icons/svg/44/44386.svg") no-repeat
+    center;
   background-size: cover;
-  opacity: .05;
+  opacity: 0.05;
 }
 
 .front::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background: url('http://cdn.flaticon.com/svg/44/44386.svg') no-repeat center;
+  background: url("https://image.flaticon.com/icons/svg/44/44386.svg") no-repeat
+    center;
   background-size: cover;
-  opacity: .05;
+  opacity: 0.05;
 }
-  
+
 .flip {
   transition: 0.6s;
   transform-style: preserve-3d;
@@ -134,7 +72,7 @@ svg {
   height: auto;
   fill: #fff;
 }
-  
+
 .front {
   z-index: 2;
   transform: rotateY(0deg);
@@ -154,24 +92,28 @@ svg {
   height: 45px;
   top: 20px;
   left: 20px;
-  background: linear-gradient(135deg, hsl(269,54%,87%) 0%,hsl(200,64%,89%) 44%,hsl(18,55%,94%) 100%);;
+  background: linear-gradient(
+    135deg,
+    hsl(269, 54%, 87%) 0%,
+    hsl(200, 64%, 89%) 44%,
+    hsl(18, 55%, 94%) 100%
+  );
   border-radius: 8px;
 }
 
 .chip::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-  border: 4px solid hsla(0, 0, 50, .1);
+  border: 4px solid hsla(0, 0, 50, 0.1);
   width: 80%;
   height: 70%;
   border-radius: 5px;
 }
-  
 
 .strip {
   background: linear-gradient(135deg, hsl(0, 0, 25%), hsl(0, 0, 10%));
@@ -182,7 +124,7 @@ svg {
   left: 0;
 }
 
-.number {
+#number {
   position: absolute;
   margin: 0 auto;
   top: 110px;
@@ -190,7 +132,7 @@ svg {
   font-size: 24px;
 }
 
-.number2 {
+#number2 {
   position: absolute;
   margin: 0 auto;
   top: 110px;
@@ -198,7 +140,7 @@ svg {
   font-size: 24px;
 }
 
-.number3 {
+#number3 {
   position: absolute;
   margin: 0 auto;
   top: 110px;
@@ -206,7 +148,7 @@ svg {
   font-size: 24px;
 }
 
-.number4 {
+#number4 {
   position: absolute;
   margin: 0 auto;
   top: 110px;
@@ -214,7 +156,7 @@ svg {
   font-size: 24px;
 }
 
-.card-holder label {
+#card-holder label {
   font-size: 10px;
   letter-spacing: 1px;
   text-shadow: none;
@@ -226,7 +168,7 @@ svg {
   color: white;
 }
 
-.card-expiration-date label {
+#card-expiration-date label {
   font-size: 10px;
   letter-spacing: 1px;
   text-shadow: none;
@@ -238,7 +180,7 @@ svg {
   color: white;
 }
 
-.ccv label {
+#ccv label {
   font-size: 10px;
   letter-spacing: 1px;
   text-shadow: none;
@@ -251,8 +193,8 @@ svg {
   color: white;
 }
 
-.card-holder,
-.card-expiration-date {
+#card-holder,
+#card-expiration-date {
   position: absolute;
   margin: 0 auto;
   top: 180px;
@@ -261,18 +203,17 @@ svg {
   text-transform: capitalize;
 }
 
-.card-expiration-date {
+#card-expiration-date {
   text-align: right;
   left: auto;
   right: 20px;
 }
 
-.card-expiration-date div {
+#card-expiration-date div {
   display: inline-block;
 }
 
-
-.ccv {
+#ccv {
   height: 36px;
   background: #fff;
   width: 91%;
@@ -287,7 +228,7 @@ svg {
   padding: 10px;
 }
 
-.ccv div {
+#ccv div {
   margin-top: 22px;
   font-size: 17px;
 }
