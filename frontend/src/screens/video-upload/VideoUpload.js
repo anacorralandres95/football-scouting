@@ -1,10 +1,12 @@
 import React from "react";
-import { createVideoPromise } from "../http/VideosService.js";
-import { HeaderUser } from "../components/HeaderUser.js";
+import formatMessage from "format-message";
+import { createVideoPromise } from "../../http/VideosService.js";
+import { HeaderUser } from "../../components/HeaderUser.js";
 import { useHistory } from "react-router-dom";
-import "../css/video-upload.css";
-import { Faqs } from "../components/Faqs.js";
-import upload from "../assets/img/upload-video.png";
+import { Faqs } from "../../components/Faqs.js";
+import upload from "../../assets/img/upload-video.png";
+import { Button } from "../../components/button/Button";
+import "./video-upload.css";
 
 function VideoUpload() {
   const history = useHistory();
@@ -31,7 +33,7 @@ function VideoUpload() {
       <Faqs />
 
       <section class="target-upload">
-        <h1>SUBE TU VÍDEO A LA PLATAFORMA</h1>
+        <h1>{formatMessage("Sube tu vídeo a la plataforma")}</h1>
 
         <form onSubmit={handleVideoUpload} id="form-video">
           <img src={upload} alt="upload-video" id="img-upload" />
@@ -39,22 +41,30 @@ function VideoUpload() {
           <section class="upload">
             <input type="file" name="video_url" id="upload-video" />
 
-            <label for="title">TÍTULO</label>
+            <label for="title">{formatMessage("Título")}</label>
             <input type="text" name="title" />
-            <label for="description">DESCRIPCIÓN</label>
+            <label for="description">{formatMessage("Descripción")}</label>
             <textarea
               name="description"
               id="video-description"
               cols="30"
               rows="10"
-            ></textarea>
-            <button type="submit">SUBIR VÍDEO</button>
+            />
+
+            <Button title={formatMessage("Subir vídeo")} />
             <span id="upload-meta">
-              El formato debe de ser mp4 y el tamaño no debe superar los 10MB{" "}
+              {formatMessage(
+                "El formato debe de ser mp4 y el tamaño no debe superar los 10MB"
+              )}
               <br />
-              El vídeo sólo se subirá si tienes todos los campos cubiertos{" "}
-              <br /> Este proceso tardará unos minutos <br /> Te redireccionamos
-              a tus vídeos donde lo encontrarás una vez el proceso termine
+              {formatMessage(
+                "El vídeo sólo se subirá si tienes todos los campos cubiertos"
+              )}
+              <br />
+              {formatMessage(" Este proceso tardará unos minutos")} <br />{" "}
+              {formatMessage(
+                "Te redireccionamos a tus vídeos donde lo encontrarás una vez el proceso termine"
+              )}
             </span>
           </section>
         </form>

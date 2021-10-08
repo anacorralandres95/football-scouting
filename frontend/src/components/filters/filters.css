@@ -1,0 +1,135 @@
+.main-page-grid .filters h1 {
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  font-size: 1rem;
+  margin-top: 35px;
+  margin-left: 16px;
+}
+
+.main-page-grid .filters p,
+.main-page-grid .filters a {
+  grid-column: 1;
+  grid-row: 1;
+  margin-top: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+}
+
+.main-page-grid .filters fieldset {
+  border: none;
+}
+
+.main-page-grid .filters input {
+  width: 174px;
+  padding: 1em;
+  border-radius: 5em;
+  background-color: #f8f8fb;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.main-page-grid .filters label {
+  font-size: 11px;
+  text-decoration: none;
+  color: black;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  display: block;
+  width: 250px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.main-page-grid .rate {
+  margin-left: 15px;
+}
+
+.main-page-grid input:focus {
+  box-shadow: 0 0 4pt 2pt rgba(110, 1, 255, 0.12);
+  outline: none;
+}
+
+.main-page-grid select:focus {
+  box-shadow: 0 0 4pt 2pt rgba(110, 1, 255, 0.12);
+  outline: none;
+}
+
+.main-page-grid input[type="range"]:focus {
+  box-shadow: 0 0 4pt 2pt rgba(110, 1, 255, 0.12);
+  outline: none;
+}
+
+.main-page-grid .filters select {
+  width: 220px;
+  border-radius: 5em;
+  background-color: #f9f9f9;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.main-page-grid input[type="range"] {
+  margin-bottom: 0;
+  position: relative;
+  top: -12px;
+  background: white;
+  margin-top: 8px;
+}
+
+.main-page-grid input[type="range"i] {
+  -webkit-appearance: none;
+}
+
+.main-page-grid input[type="range"]:before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: white;
+}
+
+.main-page-grid input[type="range"]::-webkit-slider-runnable-track {
+  background: #6e01ff;
+  height: 4px;
+  border-radius: 80px;
+}
+
+.main-page-grid input[type="range"]::-webkit-slider-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  border: none;
+  -webkit-appearance: none;
+  background-color: #6e01ff;
+  margin-top: -4px;
+  z-index: 99;
+  position: relative;
+  transition: 0.5s all ease;
+}
+
+#value-height-filter,
+#value-weight-filter,
+#value-strenght-filter,
+#value-velocity-filter,
+#value-technique-filter,
+#value-ball-hit-filter,
+#value-ball-stop-filter {
+  position: relative;
+  top: -20px;
+}
+
+#age-fieldset,
+#height-fieldset,
+#strenght-fieldset,
+#velocity-fieldset,
+#technique-fieldset,
+#ball-hit-fieldset,
+#ball-stop-fieldset {
+  height: 45px;
+}

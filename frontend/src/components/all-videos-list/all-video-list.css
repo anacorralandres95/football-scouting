@@ -1,0 +1,56 @@
+.video-player {
+  list-style: none;
+  border-radius: 7px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #eff2f7;
+  width: 25%;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+
+.video-player img {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.video-player video {
+  width: 100%;
+  border-radius: 7px;
+}
+
+#title-meta {
+  font-size: 0.9rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  display: block;
+  width: 100%;
+}
+
+#user-meta {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #606060;
+  margin-bottom: 2px;
+  display: block;
+  width: 150px;
+}
+
+#visualizations-meta {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #606060;
+  margin-bottom: 2px;
+}
+
+#date-meta {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #606060;
+}

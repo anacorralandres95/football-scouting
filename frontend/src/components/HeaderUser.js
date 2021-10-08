@@ -22,7 +22,7 @@ function HeaderUser() {
 
         <nav class="menu-nav2">
           <ul>
-            {user.user_type === "Padre" && (
+            {user?.user_type === "Padre" && (
               <li class="nav">
                 <button id="header-video">
                   <img src={videoUpload} alt="" />
@@ -40,7 +40,7 @@ function HeaderUser() {
 
             <li class="nav">
               <button id="header-profile">
-                <a>HOLA {user.user_name} </a>
+                <a>HOLA {user?.user_name} </a>
               </button>
             </li>
 

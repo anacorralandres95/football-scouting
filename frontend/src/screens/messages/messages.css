@@ -1,0 +1,189 @@
+.main-page-grid {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 15px;
+}
+
+.users {
+  grid-column: 1;
+  border-radius: 7px;
+  margin: 85px 22px 22px 22px;
+  padding: 30px;
+  background-color: white;
+  width: 246px;
+  border: 1px solid #eff2f7;
+  height: 79vh;
+  overflow: scroll;
+}
+
+.messages {
+  grid-column: 2;
+  margin: 85px 22px 22px 70px;
+  height: 79vh;
+  overflow: scroll;
+  border-radius: 7px;
+  border-radius: 7px;
+  padding: 30px;
+  background-color: white;
+  border: 1px solid #eff2f7;
+}
+
+.users h1 {
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  font-size: 1rem;
+  color: #6e01ff;
+  text-transform: uppercase;
+}
+
+.messages h1 {
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  font-size: 1.2rem;
+  display: block;
+  padding-bottom: 13px;
+  border-bottom: 2px solid #606060;
+  margin-top: 14px;
+}
+
+.users ul {
+  list-style-type: none;
+}
+
+.users li {
+  border-top: 2px solid #606060;
+  padding: 10px 0;
+}
+
+.users ul li span {
+  font-size: 1rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+  text-decoration: none;
+  color: black;
+}
+
+.chat {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 500px 100px;
+}
+
+#main-messages {
+  grid-row: 1;
+  overflow: scroll;
+}
+
+#main-messages ul {
+  list-style-type: none;
+}
+
+#message-received {
+  border-radius: 7px;
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #6e01ff;
+  max-width: 60%;
+}
+
+#bubble-received a {
+  display: block;
+  width: 500px;
+  text-decoration: none;
+}
+
+#typing-message {
+  grid-row: 2;
+}
+
+.chat-message {
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: inline !important;
+}
+
+#message-sent {
+  border-radius: 7px;
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #ffab00;
+  max-width: 60%;
+  float: right;
+  margin-right: 40px;
+}
+
+#bubble-sent span {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  text-align: right;
+}
+
+#bubble-sent {
+  margin-right: 40px;
+  margin-bottom: 108px;
+}
+
+#main-messages ul li {
+  width: 100%;
+}
+
+#typing-message {
+  margin-top: 20px;
+}
+
+#typing-message textarea {
+  width: 96%;
+  height: 70px;
+  padding: 1em;
+  border-radius: 7px;
+  background-color: #f8f8fb;
+  border: none;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+#typing-message textarea:focus {
+  box-shadow: 0 0 4pt 2pt rgba(110, 1, 255, 0.12);
+  outline: none;
+}
+
+#typing-message button {
+  background: #6e01ff;
+  width: 200px;
+  padding: 1em;
+  border-radius: 7px;
+  border: none;
+  box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  bottom: 16px;
+}
+
+#typing-message button:hover {
+  box-shadow: 0 3px 5px -5px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+#typing-message button:focus {
+  outline: none;
+}
+
+#typing-message button a {
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+#main-messages #user-meta {
+  position: relative;
+  right: 20px;
+  width: 100%;
+}

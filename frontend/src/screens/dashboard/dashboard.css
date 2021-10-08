@@ -1,0 +1,140 @@
+.main-page-grid {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 15px;
+}
+
+.main-page-grid .rate {
+  margin-left: 15px;
+}
+
+.main-page-grid .filters {
+  grid-column: 1;
+  border-radius: 7px;
+  margin: 85px 22px 22px 22px;
+  padding: 30px;
+  background-color: white;
+  width: 246px;
+  border: 1px solid #eff2f7;
+  height: 85vh;
+  overflow: scroll;
+}
+
+.main-page-grid .videos {
+  grid-column: 2;
+  margin: 88px 22px 22px 30px;
+  height: 83vh;
+  overflow: scroll;
+  border-radius: 7px;
+}
+
+.main-page-grid .link {
+  display: block;
+  margin-bottom: 15px;
+  width: 220px;
+  margin-left: 16px;
+  text-align: center;
+}
+
+.main-page-grid .filters #favorites,
+.main-page-grid .filters #my-videos {
+  color: #6e01ff;
+}
+
+.main-page-grid .filters button {
+  background: #6e01ff;
+  width: 212px;
+  padding: 1em;
+  border-radius: 7px;
+  border: none;
+  box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s, transform 0.3s;
+  margin-top: 20px;
+  margin-left: 16px;
+}
+
+.main-page-grid .filters button:hover {
+  box-shadow: 0 3px 5px -5px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+.main-page-grid .filters button:focus {
+  outline: none;
+}
+
+.main-page-grid .filters button a {
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin-left: 0;
+}
+
+#search-field {
+  display: flex;
+}
+
+#search-field img {
+  height: 18px;
+  position: relative;
+  top: 10px;
+  margin-right: 8px;
+}
+
+/* RATING */
+
+.star {
+  float: left;
+  height: 44px;
+  padding: 0 10px;
+  margin-left: 12px;
+}
+.star:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.star:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 22px;
+  margin-right: 3px;
+  color: #ccc;
+}
+
+.star > input:checked ~ label {
+  color: #6e01ff;
+}
+.star:not(:checked) > label:hover,
+.star:not(:checked) > label:hover ~ label {
+  color: #6e01ff;
+}
+.star > input:checked + label:hover,
+.star > input:checked + label:hover ~ label,
+.star > input:checked ~ label:hover,
+.star > input:checked ~ label:hover ~ label,
+.star > label:hover ~ input:checked ~ label {
+  color: #6e01ff;
+}
+
+/* CLOSE */
+
+img.icon-close {
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+#empty {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: whitesmoke;
+  margin-left: 100px;
+}

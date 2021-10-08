@@ -171,7 +171,7 @@ function Video() {
             </section>
 
             <section id="comment-in-video">
-              {user.user_type === "Ojeador" && (
+              {user?.user_type === "Ojeador" && (
                 <button className="contacta">
                   <a href={contactEmail}>ENVIAR UN MENSAJE</a>
                 </button>

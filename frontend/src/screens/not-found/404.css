@@ -1,0 +1,11 @@
+#notfound img {
+  display: block;
+  width: 850px;
+  margin: 100px auto 0 auto;
+}
+
+#notfound button {
+  width: 500px;
+  display: block;
+  margin: 50px auto;
+}

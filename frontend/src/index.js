@@ -4,9 +4,9 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import { Homepage } from "./screens/homepage/Homepage.js";
-import { TermsConditions } from "./screens/TermsConditions.js";
-import { AboutUs } from "./screens/AboutUs.js";
-import { Contact } from "./screens/Contact.js";
+import { TermsConditions } from "./screens/terms-about-contact/TermsConditions.js";
+import { AboutUs } from "./screens/terms-about-contact/AboutUs.js";
+import { Contact } from "./screens/terms-about-contact/Contact.js";
 import { Login } from "./screens/login/Login.js";
 import { PasswordRecovery } from "./screens/password-recovery/PasswordRecovery.js";
 import { PromiseRegister } from "./screens/registers/PromiseRegister.js";
@@ -14,13 +14,13 @@ import { ScoutRegister } from "./screens/registers/ScoutRegister.js";
 import { AssistantRegister } from "./screens/registers/AssistantRegister.js";
 import { FileCard } from "./screens/file-card/FileCard.js";
 import { Payment } from "./screens/payment/Payment.js";
-import { Dashboard } from "./screens/Dashboard.js";
-import { Favorites } from "./screens/Favorites.js";
-import { MyVideos } from "./screens/MyVideos.js";
-import { VideoUpload } from "./screens/VideoUpload.js";
+import { Dashboard } from "./screens/dashboard/Dashboard.js";
+import { Favorites } from "./screens/dashboard/favorites/Favorites.js";
+import { MyVideos } from "./screens/dashboard/my-videos/MyVideos.js";
+import { VideoUpload } from "./screens/video-upload/VideoUpload.js";
 import { Video } from "./screens/Video.js";
-import { Messages } from "./screens/Messages.js";
-import { NotFound } from "./screens/NotFound.js";
+import { Messages } from "./screens/messages/Messages.js";
+import { NotFound } from "./screens/not-found/NotFound.js";
 
 import { AuthProvider } from "./shared/context/auth-context";
 
