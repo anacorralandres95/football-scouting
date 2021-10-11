@@ -1,27 +1,11 @@
 import React, { useReducer, useEffect } from "react";
-import { getComments } from "../http/VideosService";
-import { deleteComment } from "../http/VideosService";
 import { useParams, useHistory } from "react-router-dom";
-import { useAuth } from "../shared/context/auth-context";
-import trash from "../assets/icons/trash.png";
-
-function CommentsReducer(state, action) {
-  switch (action.type) {
-    case "GET_COMMENTS_SUCCESS":
-      return { ...state, comments: action.initialComments };
-
-    case "DELETE_COMMENT":
-      return {
-        ...state,
-        comments: state.comments.filter(
-          (comment) => comment.comment_id !== action.comment_id
-        ),
-      };
-
-    default:
-      return state;
-  }
-}
+import { getComments } from "../../../http/VideosService";
+import { deleteComment } from "../../../http/VideosService";
+import { useAuth } from "../../../shared/context/auth-context";
+import { CommentsReducer } from "../../../reducers/CommentsReducer";
+import trash from "../../../assets/icons/trash.png";
+import "./comments.css";
 
 function Comments() {
   const params = useParams();
@@ -30,8 +14,6 @@ function Comments() {
 
   const [state, dispatch] = useReducer(CommentsReducer, {
     comments: [],
-    // selectedComment: null
-    // isChallengeOpened: false
   });
 
   useEffect(() => {

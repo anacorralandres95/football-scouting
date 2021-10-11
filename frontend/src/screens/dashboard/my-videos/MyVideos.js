@@ -2,16 +2,16 @@ import React, { useReducer, useEffect } from "react";
 import { Link } from "react-router-dom";
 import formatMessage from "format-message";
 import { getMyVideos } from "../../../http/VideosService";
-import { Faqs } from "../../../components/Faqs.js";
-import { HeaderUser } from "../../../components/HeaderUser.js";
+import { Faqs } from "../../../components/faqs/Faqs.js";
+import { HeaderUser } from "../../../components/headers/HeaderUser.js";
 import { useAuth } from "../../../shared/context/auth-context";
 import search from "../../../assets/icons/search.png";
 import { AllVideosList } from "../../../components/all-videos-list/AllVideosList";
 import { MyVideosReducer } from "../../../reducers/MyVideosReducer";
 import { useFilters } from "../useFilters";
 import { Filters } from "../../../components/filters/Filters";
+import { Footer } from "../../../components/footer/Footer";
 import "../dashboard.css";
-import { Footer } from "../../../components/Footer";
 
 function MyVideos() {
   const { user } = useAuth();

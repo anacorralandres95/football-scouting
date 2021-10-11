@@ -18,13 +18,13 @@ import { Dashboard } from "./screens/dashboard/Dashboard.js";
 import { Favorites } from "./screens/dashboard/favorites/Favorites.js";
 import { MyVideos } from "./screens/dashboard/my-videos/MyVideos.js";
 import { VideoUpload } from "./screens/video-upload/VideoUpload.js";
-import { Video } from "./screens/Video.js";
+import { Video } from "./screens/video/Video.js";
 import { Messages } from "./screens/messages/Messages.js";
 import { NotFound } from "./screens/not-found/NotFound.js";
 
 import { AuthProvider } from "./shared/context/auth-context";
 
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
   return (

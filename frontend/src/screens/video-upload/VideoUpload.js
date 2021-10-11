@@ -1,9 +1,9 @@
 import React from "react";
 import formatMessage from "format-message";
 import { createVideoPromise } from "../../http/VideosService.js";
-import { HeaderUser } from "../../components/HeaderUser.js";
+import { HeaderUser } from "../../components/headers/HeaderUser.js";
 import { useHistory } from "react-router-dom";
-import { Faqs } from "../../components/Faqs.js";
+import { Faqs } from "../../components/faqs/Faqs.js";
 import upload from "../../assets/img/upload-video.png";
 import { Button } from "../../components/button/Button";
 import "./video-upload.css";

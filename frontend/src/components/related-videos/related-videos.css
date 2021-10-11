@@ -1,0 +1,30 @@
+#more-videos h1 {
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  font-size: 1rem;
+  text-decoration: none;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+#more-videos ul {
+  padding: 0;
+}
+
+.video-player-related {
+  list-style: none;
+  border-radius: 7px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #eff2f7;
+  width: 95%;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.video-player-related video {
+  width: 100%;
+  border-radius: 7px;
+}

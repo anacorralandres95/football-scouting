@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "../shared/context/auth-context";
-import "../css/header-footer.css";
-import logo from "../assets/img/Logo-ChampionsW.png";
-import videoUpload from "../assets/icons/video.png";
-import notification from "../assets/icons/notifications.png";
+import formatMessage from "format-message";
+import { useAuth } from "../../shared/context/auth-context";
+import logo from "../../assets/img/Logo-ChampionsW.png";
+import videoUpload from "../../assets/icons/video.png";
+import notification from "../../assets/icons/notifications.png";
+import "./header.css";
 
 function HeaderUser() {
   const { logOut, user } = useAuth();
@@ -18,7 +19,7 @@ function HeaderUser() {
           </Link>
         </section>
 
-        <p id="aviso">Sólo disponible en versión Desktop</p>
+        <p id="aviso">{formatMessage("Sólo disponible en versión Desktop")}</p>
 
         <nav class="menu-nav2">
           <ul>
@@ -26,7 +27,7 @@ function HeaderUser() {
               <li class="nav">
                 <button id="header-video">
                   <img src={videoUpload} alt="" />
-                  <Link to="/video-upload">SUBIR VÍDEO</Link>
+                  <Link to="/video-upload">{formatMessage("Subir vídeo")}</Link>
                 </button>
               </li>
             )}
@@ -34,19 +35,19 @@ function HeaderUser() {
             <li class="nav">
               <button id="header-notifications">
                 <img src={notification} alt="" />
-                <a>NOTIFICACIONES</a>
+                <p>{formatMessage("Notificaciones")}</p>
               </button>
             </li>
 
             <li class="nav">
               <button id="header-profile">
-                <a>HOLA {user?.user_name} </a>
+                <p>{`${formatMessage("Hola")} ${user?.user_name}`} </p>
               </button>
             </li>
 
             <li class="login-nav">
               <button id="header-profile" onClick={logOut}>
-                <a>SALIR</a>
+                <p>{formatMessage("Salir")}</p>
               </button>
             </li>
           </ul>

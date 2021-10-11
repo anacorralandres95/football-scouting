@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import formatMessage from "format-message";
 import { getFavorites } from "../../../http/VideosService";
 import { useAuth } from "../../../shared/context/auth-context";
-import { Faqs } from "../../../components/Faqs.js";
-import { HeaderUser } from "../../../components/HeaderUser.js";
+import { Faqs } from "../../../components/faqs/Faqs.js";
+import { HeaderUser } from "../../../components/headers/HeaderUser.js";
 import search from "../../../assets/icons/search.png";
 import { FavoritesReducer } from "../../../reducers/FavoritesReducer";
 import { useFilters } from "../useFilters";
 import { Filters } from "../../../components/filters/Filters";
 import { AllVideosList } from "../../../components/all-videos-list/AllVideosList";
+import { Footer } from "../../../components/footer/Footer";
 import "../dashboard.css";
-import { Footer } from "../../../components/Footer";
 
 function Favorites() {
   const { user } = useAuth();

@@ -4,14 +4,14 @@ import formatMessage from "format-message";
 import { useAuth } from "../../shared/context/auth-context";
 import { getVideos } from "../../http/VideosService";
 import { AllVideosList } from "../../components/all-videos-list/AllVideosList";
-import { Faqs } from "../../components/Faqs.js";
-import { HeaderUser } from "../../components/HeaderUser.js";
+import { Faqs } from "../../components/faqs/Faqs.js";
+import { HeaderUser } from "../../components/headers/HeaderUser.js";
 import search from "../../assets/icons/search.png";
 import { VideosReducer } from "../../reducers/VideosReducer";
 import { Filters } from "../../components/filters/Filters";
 import { useFilters } from "./useFilters";
 import "./dashboard.css";
-import { Footer } from "../../components/Footer";
+import { Footer } from "../../components/footer/Footer";
 
 function Dashboard() {
   const { user } = useAuth();

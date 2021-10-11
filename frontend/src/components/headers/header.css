@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap");
+
+body {
+  background-size: cover;
+  background-color: #f8f8fb;
+  margin: 0;
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  pointer-events: none;
+  height: 430px;
+  background-color: #6e00ff;
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+  z-index: -2000;
+}
+
+header img {
+  height: 50px;
+}
+
+header {
+  padding: 6px 25px 4px 25px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #6e00ff;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+  z-index: 1000;
+}
+
+header ul {
+  margin: 7px 45px 0 0;
+  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+header a,
+header p {
+  display: block;
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  padding: 9px 10px 8px 10px;
+  display: inline-block;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+header button {
+  background: transparent;
+  border: none;
+}
+
+.login-nav {
+  border: 2px solid white;
+  display: block;
+  border-radius: 50px;
+  transition: background-color 0.6s;
+}
+
+.nav {
+  margin-top: 3px;
+}
+
+.nav a {
+  text-transform: uppercase;
+}
+
+.login-nav:hover {
+  background-color: white;
+}
+
+.login-nav a {
+  color: white;
+  transition: color 0.6s;
+}
+
+.login-nav:hover a {
+  color: #6e00ff;
+}
+
+header button.nav {
+  margin-right: 15px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.logo a {
+  padding: 0;
+}
+
+.menu-nav2 img {
+  height: 18px;
+  padding-left: 10px;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+}
+
+.menu-nav2 a {
+  display: inline-block;
+}
+
+#aviso {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  header {
+    background-color: #6e00ff;
+    opacity: 0.9;
+    height: 100vh;
+  }
+
+  header ul {
+    display: none;
+  }
+
+  #aviso {
+    display: inline-block;
+    font-size: 0.9em;
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: Roboto, sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+    padding-top: 5px;
+  }
+}

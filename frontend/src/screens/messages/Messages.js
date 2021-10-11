@@ -1,6 +1,6 @@
 import React from "react";
 import formatMessage from "format-message";
-import { HeaderUser } from "../../components/HeaderUser.js";
+import { HeaderUser } from "../../components/headers/HeaderUser.js";
 import { Button } from "../../components/button/Button";
 import "./messages.css";
 

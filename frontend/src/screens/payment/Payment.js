@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import formatMessage from "format-message";
-import { Header } from "../../components/Header.js";
-import { Footer } from "../../components/Footer.js";
-import { Faqs } from "../../components/Faqs.js";
+import { Header } from "../../components/headers/Header.js";
+import { Footer } from "../../components/footer/Footer.js";
+import { Faqs } from "../../components/faqs/Faqs.js";
 import { CreditCard } from "./credit-card/CreditCard.js";
 import { ButtonLink } from "../../components/button-link/ButtonLink.js";
 import { CheckboxInput } from "../../components/inputs/CheckboxInput";

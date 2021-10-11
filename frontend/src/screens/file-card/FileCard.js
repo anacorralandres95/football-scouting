@@ -2,13 +2,12 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import formatMessage from "format-message";
 import { useAuth } from "../../shared/context/auth-context";
-import { Header } from "../../components/Header.js";
-import { Footer } from "../../components/Footer.js";
-import { Faqs } from "../../components/Faqs.js";
+import { Header } from "../../components/headers/Header.js";
+import { Footer } from "../../components/footer/Footer.js";
+import { Faqs } from "../../components/faqs/Faqs.js";
 import photo from "../../assets/icons/user.png";
 import { Button } from "../../components/button/Button.js";
 import { NameInputs } from "../../components/inputs/NameInputs";
-import "./file-card.css";
 import { useForm } from "react-hook-form";
 import { GenderInput } from "../../components/inputs/GenderInput";
 import { CheckboxInput } from "../../components/inputs/CheckboxInput";
@@ -16,6 +15,7 @@ import { DateBirthInput } from "../../components/inputs/DateBirthInput";
 import { LocationInputs } from "../../components/inputs/LocationInputs";
 import { MetricInputs } from "../../components/inputs/MetricInputs";
 import { FootballSkillsInputs } from "../../components/inputs/FootballSkillsInputs";
+import "./file-card.css";
 
 function FileCard() {
   const { signUpPromise } = useAuth();

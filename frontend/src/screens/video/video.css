@@ -1,0 +1,103 @@
+.target-video {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 1fr;
+}
+
+.target-video1 {
+  border-radius: 7px;
+  margin: 85px 22px 22px 22px;
+  padding: 30px;
+  background-color: white;
+  border: 1px solid #eff2f7;
+  grid-column: 1;
+}
+
+.target-video2 {
+  border-radius: 7px;
+  margin: 85px 22px 22px 22px;
+  padding: 30px;
+  background-color: white;
+  border: 1px solid #eff2f7;
+  grid-column: 2;
+}
+
+#video video {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.target-video button {
+  background: #6e01ff;
+  width: 212px;
+  padding: 1em;
+  border-radius: 7px;
+  border: none;
+  box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s, transform 0.3s;
+  margin-top: 20px;
+}
+
+.target-video button:hover {
+  box-shadow: 0 3px 5px -5px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+.target-video button:focus {
+  outline: none;
+}
+
+.target-video button p {
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+#average-rating .rate .globalpuntuation {
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  font-size: 1rem;
+  text-decoration: none;
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+.star-video {
+  margin-top: 12px;
+}
+
+video:hover {
+  outline: none;
+}
+
+video:focus {
+  outline: none;
+}
+
+#name-related {
+  text-transform: uppercase;
+}
+
+#ratingbutton {
+  margin: 0 auto 15px auto;
+  display: block;
+}
+
+#finalrate {
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  font-size: 1.2rem;
+  width: 100%;
+  color: #6e01ff;
+  margin-bottom: 0;
+}

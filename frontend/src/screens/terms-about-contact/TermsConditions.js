@@ -1,12 +1,12 @@
 import React from "react";
 import formatMessage from "format-message";
-import { Header } from "../../components/Header.js";
-import { Footer } from "../../components/Footer.js";
-import { Faqs } from "../../components/Faqs.js";
-import "./terms-about-contact.css";
+import { Header } from "../../components/headers/Header.js";
+import { HeaderUser } from "../../components/headers/HeaderUser.js";
+import { Footer } from "../../components/footer/Footer.js";
+import { Faqs } from "../../components/faqs/Faqs.js";
 import illustration from "../../assets/img/terms.svg";
 import { useAuth } from "../../shared/context/auth-context.js";
-import { HeaderUser } from "../../components/HeaderUser.js";
+import "./terms-about-contact.css";
 
 function TermsConditions() {
   const { user } = useAuth();

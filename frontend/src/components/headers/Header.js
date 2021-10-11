@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../css/header-footer.css";
-import logo from "../assets/img/Logo-ChampionsW.png";
+import formatMessage from "format-message";
+import logo from "../../assets/img/Logo-ChampionsW.png";
+import "./header.css";
 
 function Header() {
   return (
@@ -13,29 +14,31 @@ function Header() {
           </Link>
         </section>
 
-        <p id="aviso">Sólo disponible en versión Desktop</p>
+        <p id="aviso">{formatMessage("Sólo disponible en versión Desktop")}</p>
 
         <nav className="menu-nav">
           <ul>
             <li>
               <button className="nav">
-                <Link to="/contact">CONTACTO</Link>
+                <Link to="/contact">{formatMessage("Contacto")}</Link>
               </button>
             </li>
 
             <li>
               <button className="nav">
-                <Link to="/about-us">SOBRE NOSOTROS</Link>
+                <Link to="/about-us">{formatMessage("Sobre nosotros")}</Link>
               </button>
             </li>
             <li>
               <button className="nav">
-                <Link to="/terms-conditions">TÉRMINOS Y CONDICIONES</Link>
+                <Link to="/terms-conditions">
+                  {formatMessage("Términos y condiciones")}
+                </Link>
               </button>
             </li>
             <li>
               <button className="login-nav">
-                <Link to="/login">LOGIN</Link>
+                <Link to="/login">{formatMessage("Login")}</Link>
               </button>
             </li>
           </ul>

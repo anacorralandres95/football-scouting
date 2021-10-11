@@ -2,9 +2,9 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import formatMessage from "format-message";
 import { useAuth } from "../../../shared/context/auth-context";
-import { Header } from "../../../components/Header.js";
-import { Footer } from "../../../components/Footer.js";
-import { Faqs } from "../../../components/Faqs.js";
+import { Header } from "../../../components/headers/Header.js";
+import { Footer } from "../../../components/footer/Footer.js";
+import { Faqs } from "../../../components/faqs/Faqs.js";
 import { RrssButtons } from "../../../components/rrss-buttons/RrssButtons";
 import { NameInputs } from "../../../components/inputs/NameInputs";
 import { Button } from "../../../components/button/Button";
@@ -14,8 +14,8 @@ import { EMAIL_REGEX, MAX_LENGTH_PASSWORD } from "../../../utils/constants";
 import { PasswordInput } from "../../../components/inputs/PasswordInput";
 import { UserTypeInput } from "../../../components/inputs/UserTypeInput";
 import { CheckboxInput } from "../../../components/inputs/CheckboxInput";
-import "./registration.css";
 import { ClubInput } from "../../../components/inputs/ClubInput";
+import "./registration.css";
 
 function Register({ value, title }) {
   const { signUp } = useAuth();

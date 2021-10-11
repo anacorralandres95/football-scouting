@@ -1,23 +1,8 @@
 import React, { useReducer, useEffect } from "react";
-import { useHistory } from "react-router-dom";
-import { getRelatedVideos } from "../http/VideosService";
-import { useParams } from "react-router-dom";
-
-function RelatedReducer(state, action) {
-  switch (action.type) {
-    case "GET_RELATED_SUCCESS":
-      return { ...state, related: action.initialRelated };
-
-    case "SELECT_RELATED":
-      return {
-        ...state,
-        selectedRelated: action.index,
-      };
-
-    default:
-      return state;
-  }
-}
+import { useHistory, useParams } from "react-router-dom";
+import { getRelatedVideos } from "../../http/VideosService";
+import { RelatedReducer } from "../../reducers/RelatedReducer";
+import "./related-videos.css";
 
 function RelatedVideos() {
   const history = useHistory();
@@ -62,8 +47,9 @@ function RelatedVideos() {
             </span>
 
             <span id="date-meta">
-              {Related.team} ·{" "}
-              {Related.created_at.substring(0, 16).replace("T", " ")}
+              {`${Related.team} · ${Related.created_at
+                .substring(0, 16)
+                .replace("T", " ")}`}
             </span>
           </li>
         ))}
